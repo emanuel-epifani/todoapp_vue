@@ -1,0 +1,41 @@
+Prerequisito:
+    Utilizzare il framework grafico Vuetify. Documentazione di riferimento al link seguente:
+      https://vuetifyjs.com/en/getting-started/installation/
+
+Parte 1:
+    Dare all'utente la possibilità di inserire un task (nella forma di una stringa di testo) e, tramite un bottone o il tasto invio, inserire questo task in una lista;
+    la lista deve avere la possibilità di:
+        - rinominare il task precedentemente inserito
+        - cancellare il task precedentemente inserito
+        - confermare di aver eseguito il task precedentemente inserito
+        - annullare la conferma di aver eseguito il task precedentemente inserito
+
+Parte 2:
+    Aggiungere la possibilità di "archiviare" i task confermati
+    Visualizzare in una pagina "COMPLETATI" una lista con tutti i task archiviati (usare vue-router per gestire le rotte delle pagine)
+
+Parte 3:
+    Creare una finta pagina di login facendo inserire solo il nome della persona (usare vue-router per gestire le rotte delle pagine)
+    Usare questo nome utente per identificare ogni task inserito da questa persona
+    Rendere visibile il nome della persona che ha inserito il task nella lista principale e nella lista dell pagina "COMPLETATI"
+
+Parte 4:
+    Nella pagina "COMPLETATI" tramite la selezione di un nome (si può usare una select che racchiuda tutti i nomi delle persone che hanno creato i task ad esempio) filtrare i task completati per il nome selezionato
+
+Parte 5:
+       Nella pagina "COMPLETATI" tramite la compilazione di un campo di testo filtrare i task per il testo inserito (il filtro deve agire sia sul nome della persona sia sul nome del task)
+
+Parte 6:
+ Il sito XKCD raccoglie le strisce umoristiche dell'ex fisico americano Randall Munroe. Questo sito espone un servizio che, a richieta, fornisce i dati delle varie vignette realizzate da Munroe nel corso del tempo. In questa parte dell'esercizio si richiede di usare le chiamate API (realizzate mediante la libreria Axios) per mostrare delle informazioni provenienti da questo sito. L'indirizzo seguente mostra le URL a cui mandare la request, con una breve spiegazione:
+
+   https://xkcd.com/json.html
+
+   Usando la libreria Axios (per installarla e usarla in un progetto Vue 2 fare riferimento a https://medium.com/spemer/using-axios-in-vue-js-17f186756a8b),
+        si aggiunga al progetto stesso una pagina intitolata "Albo" in cui si mostra il dettaglio della vignetta 100. La pagina deve contenere:
+    - Giorno della vignetta (campo "day" del JSON di ritorno nella response del servizio),
+    - Mese della vignetta (campo "month" del JSON di ritorno nella response del servizio),
+    - Anno (campo "year" del JSON di ritorno nella response del servizio),
+    - Numero (campo "num" del JSON di ritorno nella response del servizio).
+        - Titolo della vignetta (campo "safe_title" del JSON di ritorno nella response del servizio),
+    - link dell'immagine (campo "img" del JSON di ritorno nella response del servizio),
+    - due frecce con cui sia possibile ricevere i dati del numero successivo o precedente rispetto alla striscia attualmente selezionata.

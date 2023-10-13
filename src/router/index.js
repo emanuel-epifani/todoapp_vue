@@ -1,27 +1,34 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
-Vue.use(VueRouter)
+import Vue from 'vue';
+import Router from 'vue-router';
+import CompletedTasks from '@/views/CompletedTasks.vue';
+import Login from '@/views/LoginPage.vue';
+import Albo from '@/views/AlboPage.vue';
+import TodoList from "@/views/TodoList.vue";
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+Vue.use(Router);
 
-const router = new VueRouter({
-  routes
-})
-
-export default router
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'LoginPage',
+      component: Login
+    },
+    {
+      path: '/todolist',
+      name: 'TodoList',
+      component: TodoList
+    },
+    {
+      path: '/completed',
+      name: 'CompletedTasks',
+      component: CompletedTasks
+    },
+    {
+      path: '/albo',
+      name: 'AlboPage',
+      component: Albo
+    }
+  ]
+});
